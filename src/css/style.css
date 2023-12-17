@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+#main-container{
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#gallery-container{
+ display: grid;
+grid-gap:1rem;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(4,1fr);
+margin-top: 12px;
+ 
+}
+
+.gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.navbar{
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  z-index: 100;
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-evenly;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items{
+  order: 2;
+  display: flex;
+}
+.logo{
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li{
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a{
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+  color: #117964;
+}
+ 
+
+.modal-popup{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  display: none;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-popup-content{
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  background:white;
+  width: 30%;
+  transform: translate(-50%,-50%);
+}
+
+.modal-popup-content img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.modal-popup-content i{
+  position:absolute;
+  background: white;
+  bottom: 10px;
+  left: 5px;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.closebutton{
+  position:absolute;
+  right:20px;
+  top: 70px;
+}
+
+.closebutton i{
+  cursor: pointer;
+  color: black;
+}
+
+
+.gallery {
+  position: relative;
+}
+
+.gallery > i {
+  position: absolute;
+  background: white;
+  bottom: 10px;
+  left: 5px;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.likeButton.red {
+  color: red;
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
